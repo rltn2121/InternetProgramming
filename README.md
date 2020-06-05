@@ -14,7 +14,8 @@
 
 
 <h2>2.	작동 원리</h2>
- <img src="C:/Users/박기수/Internet Programming/작동 원리.png" width="40%" height="30%" title="px(픽셀) 크기 설정" alt="RubberDuck"></img>
+ <img src="https://user-images.githubusercontent.com/54628612/83882177-b274be00-a77c-11ea-9253-4ceae9de23ef.png"></img>
+ 
 <h2>3.	상세 설명</h2>
 
 **책 목록:** 데이터베이스 booklist – 테이블 goodsinfo
