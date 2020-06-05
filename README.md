@@ -20,11 +20,11 @@
 
 메인 화면(Main.jsp) 에서는 로그인, 회원가입을 할 수 있으며, 로그인 후에 Main_login.jsp로 이동하여 책 검색을 할 수 있다. 책 검색은 도서명 / 저자명 두 가지로 할 수 있고, 대출, 반납 또한 가능하다. 오류 발생 시 DBError.jsp 페이지로 이동하여 에러 메시지를 확인할 수 있다. 회원가입과 책 대출 / 반납을 완료하면 메인화면으로 이동 후에 다시 로그인하여 사용한다.
 
-<h3> used queries </h3>
+<h3> Used Queries </h3>
 
 **책** 
 
-connection: "jdbc:mysql://localhost:3306/booklist", "root", "1234"
+**connection:** "jdbc:mysql://localhost:3306/booklist", "root", "1234"
 
 <pre><code>
 create table goodsinfo (
@@ -43,7 +43,7 @@ insert into goodsinfo values ('10004', 'The Snows Of Kilimanjaro', 'Ernest Mille
 </code></pre>
 **회원**
 
-connection:"jdbc:mysql://localhost:3306/userlist", "root", "1234"
+**connection:** "jdbc:mysql://localhost:3306/userlist", "root", "1234"
 <pre><code>
 create table userinfo(
 id varchar(20) not null,
