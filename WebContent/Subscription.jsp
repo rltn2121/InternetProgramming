@@ -10,14 +10,14 @@
 		
 
 		if (id == null || pw == null || name == null )
-			throw new Exception("µ¥ÀÌÅÍ¸¦ ÀÔ·ÂÇÏ¼¼¿ä.");
+			throw new Exception("ë°ì´í„°ë¥¼ ì…ë ¥í•˜ì„¸ìš”.");
 		Connection conn = null;
 		Statement stmt = null;
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
-			conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/userlist", "root", "5ab5c87a");
+			conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/userlist", "root", "1234");
 			if (conn == null)
-				throw new Exception("µ¥ÀÌÅÍº£ÀÌ½º¿¡ ¿¬°áÇÒ ¼ö ¾ø½À´Ï´Ù.");
+				throw new Exception("ë°ì´í„°ë² ì´ìŠ¤ì— ì—°ê²°í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
 			stmt = conn.createStatement();
 			String command = String.format(
 					"insert into userinfo "
@@ -25,11 +25,11 @@
 					id, pw, name, email, bd, gender);
 			int rowNum = stmt.executeUpdate(command);
 			if (rowNum < 1)
-				throw new Exception("µ¥ÀÌÅÍ¸¦ DB¿¡ ÀÔ·ÂÇÒ ¼ö ¾ø½À´Ï´Ù.");
+				throw new Exception("ë°ì´í„°ë¥¼ DBì— ì…ë ¥í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
 		}
 		catch(Exception e)
 		{
-			throw new Exception("ÀÌ¹Ì Á¸ÀçÇÏ´Â ¾ÆÀÌµğÀÔ´Ï´Ù.");
+			throw new Exception("ì´ë¯¸ ì¡´ì¬í•˜ëŠ” ì•„ì´ë””ì…ë‹ˆë‹¤.");
 		}
 		finally {
 			try {
