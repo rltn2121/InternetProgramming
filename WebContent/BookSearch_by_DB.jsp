@@ -5,19 +5,19 @@
 <html>
 <head>
 
-<Title>°Ë»ö °á°ú</Title>
+<Title>ê²€ìƒ‰ ê²°ê³¼</Title>
 <link href="Style.css" type="text/css" rel="stylesheet">
 </head>
 <body>
 
-	<h1>°Ë»ö °á°ú</h1>
+	<h1>ê²€ìƒ‰ ê²°ê³¼</h1>
 	<div>
 		<table align = center>
 			<tr>
-				<th>ÄÚµå</th>
-				<th>Á¦¸ñ</th>
-				<th>ÀúÀÚ</th>
-				<th>»óÅÂ</th>
+				<th>ì½”ë“œ</th>
+				<th>ì œëª©</th>
+				<th>ì €ì</th>
+				<th>ìƒíƒœ</th>
 			</tr>
 			<%
 				Connection conn = null;
@@ -25,10 +25,10 @@
 				ResultSet rs = null;
 				try {
 					Class.forName("com.mysql.jdbc.Driver");
-					conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/booklist", "root", "5ab5c87a");
+					conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/booklist", "root", "1234");
 
 					if (conn == null)
-						throw new Exception("µ¥ÀÌÅÍº£ÀÌ½º¿¡ ¿¬°áÇÒ ¼ö ¾ø½À´Ï´Ù.<br>");
+						throw new Exception("ë°ì´í„°ë² ì´ìŠ¤ì— ì—°ê²°í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤.<br>");
 					stmt = conn.createStatement();
 					String data = request.getParameter("DATA");
 					String type = request.getParameter("TYPE");
@@ -54,8 +54,8 @@
 				<td>&nbsp;&nbsp;<%=state%>&nbsp;&nbsp;</td>
 				<input type = hidden name = TITLE value = "<%=title%>">
 				<input type = hidden name = STATE value = "<%=state%>">
-				<td><input type=submit value="´ëÃâ" name = BORROW></td>
-				<td><input type=submit value="¹İ³³" name = RETURN></td>
+				<td><input type=submit value="ëŒ€ì¶œ" name = BORROW></td>
+				<td><input type=submit value="ë°˜ë‚©" name = RETURN></td>
 				</form>
 			</tr>
 			<%
