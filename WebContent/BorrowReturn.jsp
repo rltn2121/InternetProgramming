@@ -8,10 +8,10 @@
 	Statement stmt = null;
 	try {
 		Class.forName("com.mysql.jdbc.Driver");
-		conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/booklist", "root", "5ab5c87a");
+		conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/booklist", "root", "1234");
 
 		if (conn == null)
-			throw new Exception("µ¥ÀÌÅÍº£ÀÌ½º¿¡ ¿¬°áÇÒ ¼ö ¾ø½À´Ï´Ù.<br>");
+			throw new Exception("ë°ì´í„°ë² ì´ìŠ¤ì— ì—°ê²°í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤.<br>");
 		stmt = conn.createStatement();
 
 		Cookie cookies[] = request.getCookies();
